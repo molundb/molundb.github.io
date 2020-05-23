@@ -25,7 +25,8 @@ h1 {
   font-size: 3em;
   font-family: "Helvetica", "Arial", "Sans-Serif";
 }
-p {
+p,
+.hobbies {
   font-size: 1.5em;
   line-height: 1.4em;
   color: #333;
@@ -42,4 +43,8 @@ ul.posts {
 
 ul.posts li {
   list-style: none;
+}
+
+.hobbies ul li {
+  font-size: 0.75em;
 }
