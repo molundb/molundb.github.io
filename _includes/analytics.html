@@ -3,6 +3,14 @@
   async
   src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"
 ></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_test_profile }}"
+></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_test_profile }}"
+></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -11,4 +19,6 @@
   gtag("js", new Date());
 
   gtag("config", "{{ site.google_analytics }}");
+  gtag("config", "{{ site.google_analytics_test_profile }}");
+  gtag("config", "{{ site.google_analytics_raw_profile }}");
 </script>
