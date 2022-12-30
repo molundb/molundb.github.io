@@ -33,7 +33,6 @@ p,
   font-weight: lighter; /* TODO: Make font even lighter .*/ 
 }
 footer {
-  border-top: 1px solid #d5d5d5;
   font-size: 0.8em;
 }
 
