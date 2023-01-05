@@ -8,12 +8,17 @@ body {
 nav ul,
 footer ul {
   padding: 0px;
-  font-weight: 100; /* TODO: Set the font-weight according to the design. This value does not seem to change anything.*/ 
+  font-weight: 100;
 }
 nav ul li,
 footer ul li {
   display: inline;
   margin-right: 20px;
+  font-weight: bold;
+  font-size: 1em;
+}
+nav ul li {
+  margin-right: 3.8em;
 }
 a {
   text-decoration: none;
@@ -23,17 +28,20 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
-  font-size: 6em;
+  font-size: 6.8em;
   font-family: "Oswald", "Sans-Serif";
-  font-weight: 100; /* TODO: Make font even lighter .*/ 
+  font-weight: 100;
+  margin-block-end: 0.45em;
 }
 p,
 .hobbies {
-  font-size: 1.4em; 
-  font-weight: lighter; /* TODO: Make font even lighter .*/ 
+  font-size: 1.3em; 
+  font-weight: lighter;
+  max-width: 720px;
+  line-height: 1.35;
 }
 p.home-paragraph {
-  max-width: 700px;
+  font-size: 1.4em; 
 }
 
 footer {
