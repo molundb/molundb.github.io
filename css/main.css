@@ -32,6 +32,10 @@ p,
   font-size: 1.4em; 
   font-weight: lighter; /* TODO: Make font even lighter .*/ 
 }
+p.home-paragraph {
+  max-width: 700px;
+}
+
 footer {
   font-size: 0.8em;
 }
