@@ -38,7 +38,7 @@ h2 {
   font-size: 1.25em;
   font-style: italic;
 }
-h2.role-and-company {
+h2.role-and-company, th {
   font-family: "Roboto", "Sans-Serif";
   font-weight: bold;
   font-style: normal;
@@ -74,4 +74,28 @@ ul.posts li {
 
 .hobbies li{
   margin: 10px 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 50px 0;
+  margin-bottom: 40px;
+}
+
+table, th, tr, td {
+  border: none
+}
+
+th {
+  text-align: start;
+  font-size: 1.25em;
+}
+
+td {
+  padding: 16px 0px;
+  width: 180px;
+}
+
+td:last-child{
+  width: 260px;
 }
