@@ -1,9 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 60px auto;
   width: 70%;
-  background-color: #0b779d;
+  background-color: #0B779D;
+  background-image: linear-gradient(to bottom right, #0B779D, #5FAD56);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
   font-family: "Roboto", "Sans-Serif";
+  overscroll-behavior-y: none;
 }
 nav ul,
 footer ul {
@@ -19,6 +28,9 @@ footer ul li {
 }
 nav ul li {
   margin-right: 3.8em;
+}
+footer ul li a img {
+  margin-bottom: 40px;
 }
 a {
   text-decoration: none;
