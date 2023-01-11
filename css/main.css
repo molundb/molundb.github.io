@@ -6,7 +6,7 @@ body {
   height: 100%;
   margin: 60px auto;
   width: 70%;
-  background-color: #0B779D;
+  background-color: #5FAD56;
   background-image: linear-gradient(to bottom right, #0B779D, #5FAD56);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -24,7 +24,7 @@ footer ul li {
   display: inline;
   margin-right: 20px;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 nav ul li {
   margin-right: 3.8em;
