@@ -33,11 +33,8 @@ footer ul li a img {
   margin-bottom: 40px;
 }
 a {
-  text-decoration: none;
-  color: white;
-}
-a:hover {
   text-decoration: underline;
+  color: white;
 }
 h1 {
   font-size: 6.8em;
