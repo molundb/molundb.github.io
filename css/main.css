@@ -6,8 +6,8 @@ body {
   height: 100%;
   margin: 60px auto;
   width: 70%;
-  background-color: #5FAD56;
-  background-image: linear-gradient(to bottom right, #0B779D, #5FAD56);
+  background-color: #5fad56;
+  background-image: linear-gradient(to bottom right, #0b779d, #5fad56);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
@@ -28,6 +28,9 @@ footer ul li {
 }
 nav ul li {
   margin-right: 3.8em;
+}
+nav ul li a {
+  text-decoration: none;
 }
 footer ul li a img {
   margin-bottom: 40px;
@@ -50,20 +53,21 @@ h2 {
   font-size: 1.25em;
   font-style: italic;
 }
-h2.role-and-company, th {
+h2.role-and-company,
+th {
   font-family: "Roboto", "Sans-Serif";
   font-weight: bold;
   font-style: normal;
 }
 p,
 .hobbies {
-  font-size: 1.2em; 
+  font-size: 1.2em;
   font-weight: lighter;
   max-width: 720px;
   line-height: 1.35;
 }
 p.home-paragraph {
-  font-size: 1.4em; 
+  font-size: 1.4em;
 }
 
 footer {
@@ -84,7 +88,7 @@ ul.posts li {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.hobbies li{
+.hobbies li {
   margin: 10px 0;
 }
 
@@ -94,8 +98,11 @@ table {
   margin-bottom: 40px;
 }
 
-table, th, tr, td {
-  border: none
+table,
+th,
+tr,
+td {
+  border: none;
 }
 
 th {
@@ -108,6 +115,13 @@ td {
   width: 200px;
 }
 
-td:last-child{
+td:last-child {
   width: 260px;
+}
+
+.code-block {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }

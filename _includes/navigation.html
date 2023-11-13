@@ -1,9 +1,9 @@
 <nav>
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/cv">CV</a></li>
-    <li><a href="/donations">Donations</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="/" {% if page.url == "/" %}style="text-decoration: underline;"{% endif %}>Home</a></li>
+    <li><a href="/about" {% if page.url == "/about/" %}style="text-decoration: underline;"{% endif %}>About</a></li>
+    <li><a href="/cv" {% if page.url == "/cv/" %}style="text-decoration: underline;"{% endif %}>CV</a></li>
+    <li><a href="/donations" {% if page.url == "/donations/" %}style="text-decoration: underline;"{% endif %}>Donations</a></li>
+    <li><a href="/blog" {% if page.url == "/blog/" %}style="text-decoration: underline;"{% endif %}>Blog</a></li>
   </ul>
 </nav>
