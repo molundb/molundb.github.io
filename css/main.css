@@ -32,6 +32,9 @@ nav ul li {
 footer ul li a img {
   margin-bottom: 40px;
 }
+ul li {
+  margin-bottom: 1em;
+}
 a {
   text-decoration: underline;
   color: white;
