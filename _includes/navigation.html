@@ -1,9 +1,11 @@
 <nav>
-  <ul>
-    <li><a href="/" {% if page.url == "/" %}style="text-decoration: underline;"{% endif %}>Home</a></li>
-    <li><a href="/about" {% if page.url == "/about/" %}style="text-decoration: underline;"{% endif %}>About</a></li>
-    <li><a href="/cv" {% if page.url == "/cv/" %}style="text-decoration: underline;"{% endif %}>CV</a></li>
-    <li><a href="/donations" {% if page.url == "/donations/" %}style="text-decoration: underline;"{% endif %}>Donations</a></li>
-    <li><a href="/blog" {% if page.url == "/blog/" %}style="text-decoration: underline;"{% endif %}>Blog</a></li>
-  </ul>
+    <ul>
+    {% for item in site.data.navigation %}
+    <li>
+      <a href="{{ item.link }}" {% if page.url == item.link %}style="text-decoration: underline;"{% endif %}>
+        {{ item.name }}
+      </a>
+    </li>
+    {% endfor %}
+    </ul>
 </nav>
