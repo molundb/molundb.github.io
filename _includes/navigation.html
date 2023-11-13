@@ -2,9 +2,7 @@
     <ul>
     {% for item in site.data.navigation %}
     <li>
-      <a href="{{ item.link }}" {% if page.url == item.link %}style="text-decoration: underline;"{% endif %}>
-        {{ item.name }}
-      </a>
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="current-menu-item"{% endif %}>{{ item.name }}</a>
     </li>
     {% endfor %}
     </ul>
