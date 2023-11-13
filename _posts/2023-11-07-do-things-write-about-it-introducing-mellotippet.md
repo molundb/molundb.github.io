@@ -4,10 +4,6 @@ title: "Do things, write about it - introducing Mellotippet"
 date: 2023-11-07
 ---
 
-<br>
-
-### Do things, write about it - introducing Mellotippet
-
 It's time to finally start a blog - yay!
 
 It's something I've thought of doing for several years, but, for various reasons, never got around to. What finally did it for me was epsiode 26 of the main podcast that I'm currently listening to, Soft Skills Engieering. The episode is titled "Communicate Your Efforts and I Told You So" and in it on of the hosts, Jamison Dance, mentions a blog post titled "Do things, write about it". I read the blog post and it recommends writing about things that you're working on. So here I am! What programming-related things am I working on in my spare time, then?

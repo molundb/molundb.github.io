@@ -1,12 +1,8 @@
 ---
 layout: post
-title: "Mellotippet Status Update #1 - Force Upgrade & Changing the Project and Package Name"
+title: "Mellotippet Status Update #1 - Force Upgrade Dialog & Changing the Project and Package Name"
 date: 2023-11-12
 ---
-
-<br>
-
-### Mellotippet Status Update #1 - Force Upgrade & Changing the Project and Package Name
 
 This was my plan for the week:
 
