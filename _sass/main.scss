@@ -126,6 +126,15 @@ td:last-child {
   border: 1px solid #ccc;
 }
 
+.language-yaml {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  font-family: source-code-pro, Menlo, Monaco, "Courier New", Courier, monospace;
+  color: black;
+}
+
 .current-menu-item {
     text-decoration: underline;
 }
