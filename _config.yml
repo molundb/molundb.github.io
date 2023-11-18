@@ -1,5 +1,6 @@
 name: Martin Lundberg,
 markdown: kramdown
+highlighter: none
 permalink: /blog/:year/:month/:day/:title
 google_analytics: UA-170370887-1
 google_analytics_test_profile: UA-171810125-1

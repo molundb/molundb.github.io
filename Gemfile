@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").strip
 
-gem 'github-pages'
-gem "webrick", "~> 1.8",
-
+gem 'github-pages',
 group: :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-feed'
     gem 'jekyll-seo-tag'
   end
 
+gem "webrick", "~> 1.8"
