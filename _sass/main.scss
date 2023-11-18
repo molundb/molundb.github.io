@@ -50,10 +50,22 @@ h1 {
 }
 h2 {
   font-family: "Roboto Condensed", "Sans-Serif";
+  font-size: 2em;
+  margin-block-start: 1.2em;
+  margin-block-end: 0.4em;
+}
+div.post h3 {
+  margin-block-start: 2em;
+}
+div.post li {
+  padding-bottom: 8px;
+}
+h3.italic {
+  font-family: "Roboto Condensed", "Sans-Serif";
   font-size: 1.25em;
   font-style: italic;
 }
-h2.role-and-company,
+h3.role-and-company,
 th {
   font-family: "Roboto", "Sans-Serif";
   font-weight: bold;
@@ -120,7 +132,7 @@ td:last-child {
 }
 
 .current-menu-item {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .blog-title {

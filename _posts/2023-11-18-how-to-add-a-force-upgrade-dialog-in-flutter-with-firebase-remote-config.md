@@ -7,11 +7,11 @@ title: "How to Add a Force Upgrade Dialog in Flutter with Firebase Remote Config
 {% assign filename = page.id | split: "/" | last %}
 {% assign asset_path = "/assets/images/blog/" | append: date | append: "/" | append: filename %}
 
-### Introduction
+## Introduction
 
-I recently added a Force Upgrade Dialog to my flutter project called Mellotippet, and I'd like to share why and how I did it. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
+I recently added a Force Upgrade Dialog to my flutter app called Mellotippet, and I'd like to share why and how I did it. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
 
-### Why Force Upgrade is Important
+## Why Force Upgrade is important
 
 There are several good reasons to have a force upgrade mechanism in place:
 
@@ -23,16 +23,16 @@ It's important to add force upgrade capabilities as early as possible, since you
 
 In this blog post, we'll explore how to add a force upgrade dialog to a Flutter app using Firebase Remote Config. This approach allows you to prompt users to upgrade to the latest version directly from your app.
 
-### Prerequisites
+## Prerequisites
 
 Before we begin, make sure you have the following set up:
 
 1. A Flutter project.
 2. A Firebase project with <a href="https://firebase.google.com/docs/remote-config">Remote Config</a> enabled.
 
-### Step 1: Set Up Firebase Remote Config
+### Step 1: Set up Firebase Remote Config
 
-Define a Remote Config parameter for the minimum app version. In the Firebase console, add a parameter named `required_minimum_version`. If you also want to be able to _recommend_ users to upgrade to a version without forcing them, add `recommended_minimum_version`.
+Define a Remote Config parameter for the minimum app version. In the Firebase console, add a parameter named `requiredMinimumVersion`. If you also want to be able to _recommend_ users to upgrade to a version without forcing them, add `recommendedMinimumVersion`.
 
 ![image tooltip]({{asset_path}}/firebase-remote-config-versions.png){:width="800px"}
 
@@ -87,16 +87,16 @@ Define a Remote Config parameter for the minimum app version. In the Firebase co
           ),
         );
 
-        // These will be used before the values are fetched from Firebase remote config.
+        // These will be used before the values are fetched from Firebase Remote Config.
         await remoteConfig.setDefaults(const {
           'requiredMinimumVersion': '4.0.0',
           'recommendedMinimumVersion': '4.0.0',
         });
 
-        // Fetch the values from Firebase remote config
+        // Fetch the values from Firebase Remote Config
         await remoteConfig.fetchAndActivate();
 
-        // Optional: listen for and activate changes to the Firebase remote config values
+        // Optional: listen for and activate changes to the Firebase Remote Config values
         remoteConfig.onConfigUpdated.listen((event) async {
           await remoteConfig.activate();
         });
@@ -111,7 +111,7 @@ Define a Remote Config parameter for the minimum app version. In the Firebase co
     }
     ```
 
-### Step 3: Get the user's current app version
+## Step 3: Get the user's current app version
 
 To be able to know if the user has an outdated version, we need to know their current version. To achieve this, we'll use <a href="https://pub.dev/packages/package_info_plus">package_info_plus</a>.
 
@@ -154,7 +154,7 @@ To be able to know if the user has an outdated version, we need to know their cu
     }
     ```
 
-### Step 4: Define Force Upgrade Logic
+## Step 4: Define Force Upgrade Logic
 
 Now that we have both the Remote Config version and the user's version, we can compare them to determine if we should show an upgrade dialog.
 
@@ -226,7 +226,7 @@ Now that we have both the Remote Config version and the user's version, we can c
     }
     ```
 
-2. **Display the force upgrade dialog**
+2. **Display the force upgrade dialog:**
 
     Show the force upgrade dialog if the app version is lower than either the required or recommended min version.
 
@@ -272,7 +272,7 @@ Now that we have both the Remote Config version and the user's version, we can c
     }
     ```
 
-### Step 5 (optional): Open App Store / Google Play Store
+## Step 5 (optional): Open App Store / Google Play Store
 
 To make it easy for users to update their apps, make the "Update" button launch the App store on iOS devices and Google Play Store on Android devices.
 
@@ -287,23 +287,24 @@ To make it easy for users to update their apps, make the "Update" button launch 
 
 2. **Launch App/Play store**
 
-    Launch the App store on iOS devices and Google Play Store on Android devices
+    Launch the App store on iOS devices and Google Play Store on Android devices.
 
     ```dart
     void _launchAppOrPlayStore() {
+        final appId = Platform.isAndroid ? 'YOUR_ANDROID_PACKAGE_ID' : 'YOUR_IOS_APP_ID';
         final url = Uri.parse(
           Platform.isAndroid
-              ? "https://play.google.com/store/apps"
-              : "https://apps.apple.com/",
+              ? "market://details?id=$appId"
+              : "https://apps.apple.com/app/id$appId",
         );
         launchUrl(
           url,
           mode: LaunchMode.externalApplication,
         );
-      }
+    }
     ```
 
-### Step 6: Use ForceUpgradePage
+## Step 6: Use ForceUpgradePage
 
 Decide when you want to display the force upgrade dialog. Usually this is done as one of the first things in the app. In my case I set ForceUpgradeApp as the widget of the home parameter of my MaterialApp.
 
@@ -324,16 +325,16 @@ Widget build(BuildContext context) {
 }
 ```
 
-### Step 7: Run and test the app
+## Step 7: Run and test the app
 
 Run and test the app manually on both iOS and Android. Try different values for `requiredMinimumVersion` and `recommendedMinimumVersion` to verify that everything works as expected.
 
-Required and recommended dialogs
+*Required and recommended dialogs*
 
 ![image tooltip]({{asset_path}}/force-upgrade-dialog-required.png){:width="250px"}
 ![image tooltip]({{asset_path}}/force-upgrade-dialog-recommended.png){:width="250px"}
 
 
-### Outro
+## Outro
 
-This is the tutorial I wish I had when implementing this myself. I hope it can be helpful to someone. I'll post a link to Mellotippet project as soon as I've made it public. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
+I hope this tutorial is helpful. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
