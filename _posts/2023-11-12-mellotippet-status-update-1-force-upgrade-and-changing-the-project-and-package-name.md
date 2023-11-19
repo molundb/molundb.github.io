@@ -4,7 +4,7 @@ title: "Mellotippet Status Update #1 - Force Upgrade Dialog & Changing the Proje
 date: 2023-11-12
 ---
 
-This was my plan for the week:
+## This was my plan for the week:
 
 - open source the project
 - add force upgrade functionality
@@ -19,7 +19,7 @@ Adding force upgrade functionality went pretty quickly; what took time was writi
 
 Right now I'm using stage for development. Maybe at some point I'll create a dev environment for development and use stage as a pre-release testing environment, but I haven't seen the need for that yet.
 
-### My plan for next week:
+## My plan for next week:
 
 - Open source the project
 - Set proper Firebase Security Rules and unit test them

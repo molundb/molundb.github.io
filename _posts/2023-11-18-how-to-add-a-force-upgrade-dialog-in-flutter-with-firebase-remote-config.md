@@ -34,7 +34,7 @@ Before we begin, make sure you have the following set up:
 
 Define a Remote Config parameter for the minimum app version. In the Firebase console, add a parameter named `requiredMinimumVersion`. If you also want to be able to _recommend_ users to upgrade to a version without forcing them, add `recommendedMinimumVersion`.
 
-![image tooltip]({{asset_path}}/firebase-remote-config-versions.png){:width="800px"}
+![firebase remote config versions]({{asset_path}}/firebase-remote-config-versions.png){:width="800px"}
 
 ### Step 2: Fetch values from Firebase Remote Config
 
@@ -331,8 +331,8 @@ Run and test the app manually on both iOS and Android. Try different values for 
 
 *Required and recommended dialogs*
 
-![image tooltip]({{asset_path}}/force-upgrade-dialog-required.png){:width="250px"}
-![image tooltip]({{asset_path}}/force-upgrade-dialog-recommended.png){:width="250px"}
+![force upgrade dialog required]({{asset_path}}/force-upgrade-dialog-required.png){:width="250px"}
+![force upgrade dialog recommended]({{asset_path}}/force-upgrade-dialog-recommended.png){:width="250px"}
 
 
 ## Outro
