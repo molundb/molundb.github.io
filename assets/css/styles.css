@@ -22,7 +22,7 @@ h2 { font-family: "Roboto Condensed", "Sans-Serif"; font-size: 2em; margin-block
 
 div.post h3 { margin-block-start: 2em; }
 
-div.post li { padding-bottom: 8px; }
+div.post ol li { padding-bottom: 8px; }
 
 h3.italic { font-family: "Roboto Condensed", "Sans-Serif"; font-size: 1.25em; font-style: italic; }
 
@@ -34,7 +34,7 @@ p.home-paragraph { font-size: 1.4em; }
 
 footer { font-size: 0.8em; }
 
-ul.posts { margin: 20px auto 40px; font-size: 1.5em; }
+ul.posts { margin: 20px auto 40px; font-size: 1.2em; }
 
 ul.posts li { list-style: none; }
 
