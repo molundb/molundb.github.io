@@ -19,8 +19,8 @@ title: "Mellotippet Status Update #2 - Firebase function and dev environment imp
 
 Again, I achieved a bit less than planned. What I ended up doing was:
 
-- I open sourced the project. (Well, I made it public on <a href="https://github.com/molundb/mellotippet">github</a> at least).
-- I added force upgrade functionality. (And published a blog post about it on <a href="https://martinlundberg.net/blog/2023/11/18/how-to-add-a-force-upgrade-dialog-in-flutter-with-firebase-remote-config">this page</a> and on <a href="https://medium.com/p/8a339fedda9e">Medium</a>.)
+- I open sourced the project. (Well, I made it public on [github](https://github.com/molundb/mellotippet) at least).
+- I added force upgrade functionality. (And published a blog post about it on [this page]({% post_url 2023-11-18-how-to-add-a-force-upgrade-dialog-in-flutter-with-firebase-remote-config %}) and on [Medium](https://medium.com/p/8a339fedda9e))
 - I changed the region of my calculateScore firebase function and made it idempotent.
 - I discussed the design with the desginer and got a first draft.
 

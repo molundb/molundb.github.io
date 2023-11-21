@@ -9,7 +9,7 @@ title: "How to Add a Force Upgrade Dialog in Flutter with Firebase Remote Config
 
 ## Introduction
 
-I recently added a Force Upgrade Dialog to my flutter app called Mellotippet, and I'd like to share why and how I did it. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
+I recently added a Force Upgrade Dialog to my flutter app called Mellotippet, and I'd like to share why and how I did it. The source code can be found here: [https://github.com/molundb/mellotippet](https://github.com/molundb/mellotippet).
 
 ## Why Force Upgrade is important
 
@@ -28,7 +28,7 @@ In this blog post, we'll explore how to add a force upgrade dialog to a Flutter 
 Before we begin, make sure you have the following set up:
 
 1. A Flutter project.
-2. A Firebase project with <a href="https://firebase.google.com/docs/remote-config">Remote Config</a> enabled.
+2. A Firebase project with [Remote Config](https://firebase.google.com/docs/remote-config) enabled.
 
 ### Step 1: Set up Firebase Remote Config
 
@@ -40,7 +40,7 @@ Define a Remote Config parameter for the minimum app version. In the Firebase co
 
 1. **Install Dependencies:**
 
-   Open your `pubspec.yaml` file and add a dependency on <a href="https://pub.dev/packages/firebase_remote_config">firebase_remote_config</a>.
+   Open your `pubspec.yaml` file and add a dependency on [firebase_remote_config](https://pub.dev/packages/firebase_remote_config).
 
     ```yaml
     dependencies:
@@ -113,11 +113,11 @@ Define a Remote Config parameter for the minimum app version. In the Firebase co
 
 ## Step 3: Get the user's current app version
 
-To be able to know if the user has an outdated version, we need to know their current version. To achieve this, we'll use <a href="https://pub.dev/packages/package_info_plus">package_info_plus</a>.
+To be able to know if the user has an outdated version, we need to know their current version. To achieve this, we'll use [package_info_plus](https://pub.dev/packages/package_info_plus).
 
 1. **Install Dependencies:**
 
-    Open your `pubspec.yaml` file and add a dependency on <a href="https://pub.dev/packages/package_info_plus">package_info_plus</a>.
+    Open your `pubspec.yaml` file and add a dependency on [package_info_plus](https://pub.dev/packages/package_info_plus).
 
     ```yaml
     dependencies:
@@ -141,7 +141,7 @@ To be able to know if the user has an outdated version, we need to know their cu
 
 3. **Intialize:**
 
-    Call `initialize()` in `main.dart`. In this example we use <a href="https://pub.dev/packages/get_it">get_it</a> as a service locator, but you can use whatever you like. The important thing is that the version is fetched and can be used in the comparison in the next step.
+    Call `initialize()` in `main.dart`. In this example we use [get_it](https://pub.dev/packages/get_it) as a service locator, but you can use whatever you like. The important thing is that the version is fetched and can be used in the comparison in the next step.
 
     ```dart
     import 'package:firebase_core/firebase_core.dart';
@@ -278,7 +278,7 @@ To make it easy for users to update their apps, make the "Update" button launch 
 
 1. **Install Dependencies:**
 
-   Open your `pubspec.yaml` file and add a dependency on <a href="https://pub.dev/packages/url_launcher">url_launcher</a>.
+   Open your `pubspec.yaml` file and add a dependency on [url_launcher](https://pub.dev/packages/url_launcher).
 
     ```yaml
     dependencies:
@@ -337,4 +337,4 @@ Run and test the app manually on both iOS and Android. Try different values for 
 
 ## Outro
 
-I hope this tutorial is helpful. The source code can be found here: <a href="https://github.com/molundb/mellotippet">https://github.com/molundb/mellotippet</a>.
+I hope this tutorial is helpful. The source code can be found here: [https://github.com/molundb/mellotippet](https://github.com/molundb/mellotippet).
