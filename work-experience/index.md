@@ -1,24 +1,35 @@
 ---
 layout: default
-title: CV
+title: Work Experience
 ---
 
-# CV
+# Work Experience
+
+## Senior Android Engineer - Zooplus (Netlight Consultant)
 
 ### _Q3 2023 - Q1 2024_
 
-### Senior Android Engineer - Zooplus (as Netlight Consultant)
+I joined Zooplus, an online retailer of pet food and supplies with a yearly
+revenue exceeding €2.1 billion, as a member of one of the Scrum teams
+responsible for developing the Zooplus Android app.
 
-Zooplus is a an online reilater of pet food and supplies, with a yearly revenue
-of more than €2.1 billion. I am part of a Scrum team developing the Zooplus
-Android app.
-
-In my first three months I have rapidly integrated into the team, becoming a
-major contributor to the Android app. I've played a crucial role in meeting the
-deadline for a significant new feature and have continually enhanced the
-codebase during feature implementation. Additionally, I initiated discussions
-and planning for essential architectural improvements while making valuable
-contributions to our team's Scrum process.
+- Quickly integrated into the team, becoming a key contributor and facilitating
+  on-time delivery of a significant new feature.
+- Led and contributed to several initiatives for vital architectural
+  improvements, including:
+  - Increasing focus on unit testing
+  - Transitioning to ViewBinding from kotlin synthetics
+  - Refining our Jenkins CI pipeline
+  - Conducting code-analysis with Sonarqube
+  - Implementing standardized code formatting
+  - Migrating to kotlin from Java
+- Took charge of the weekly Android sync meetings by creating a structured
+  template for notes and moderating discussions.
+- Introduced Architectural Decision Records to document and guide development
+  decisions.
+- Joined an initiative by the area architect to improve our testing strategy for
+  the Android app, iOS app and mobile apps backend.
+- Improved our team’s Scrum process and organized sprint retros.
 
 <br>
 
