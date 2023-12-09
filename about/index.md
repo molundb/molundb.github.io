@@ -7,14 +7,11 @@ title: About
 
 ### _Biography_
 
-Hello, I'm Martin! 👋 I'm a software engineer passionate about using technology
-to create positive change. I was born and raised in Sweden but have had the
-privilege of also calling Ireland, China, and Germany home, embracing diverse
-cultures, languages and experiences along the way.
-
-- Double Master's in Computer Science
-- Specialized in Android and Flutter development
-- Committed to utilizing technology for a better world
+I'm a software engineer passionate about using technology to create positive
+change. I was born and raised in Sweden but have had the privilege of also
+calling Ireland, China, and Germany home, embracing diverse cultures, languages
+and experiences along the way. I have a master's degree in Computer Science and
+am specialized in Android and Flutter development.
 
 ### _Interests_
 
