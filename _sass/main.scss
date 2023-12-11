@@ -100,8 +100,7 @@ ul.posts li {
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 50px 0;
+  border-spacing: 16px;
   margin-bottom: 40px;
 }
 
@@ -115,15 +114,6 @@ td {
 th {
   text-align: start;
   font-size: 1.25em;
-}
-
-td {
-  padding: 16px 0px;
-  width: 200px;
-}
-
-td:last-child {
-  width: 260px;
 }
 
 .current-menu-item {

@@ -43,7 +43,7 @@ My plan for next week:
 
 <br>
 
-Score page design             |  Prediction page design
+Score page design          |  Prediction page design
 :-------------------------:|:-------------------------:
 ![Score page design]({{asset_path}}/score-page-design.png){:width="200px"}  |  ![Prediction page design]({{asset_path}}/prediction-page-design.png){:width="200px"}
 
