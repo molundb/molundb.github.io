@@ -19,7 +19,7 @@ Scrum teams responsible for developing the Zooplus Android app.
   improvements, including:
   - Increasing focus on unit testing
   - Transitioning to ViewBinding from Kotlin synthetics
-  - Refining our Jenkins CI pipeline
+  - Refining the Jenkins CI pipeline
   - Conducting code-analysis with Sonarqube
   - Implementing standardized code formatting
   - Modularizing the app
@@ -42,7 +42,7 @@ Joined a small, ongoing project aimed at creating a business banking app for
 - Managed native aspects for Android and iOS, mostly related to biometrics and
   cryptography.
 - Simplified the architecture of the onboarding process.
-- Introduced and implemented integration tests.
+- Introduced and implemented Flutter integration tests.
 - Facilitated a smooth onboarding process for a new team member.
 
 ## Android Developer - TIER Mobility (Netlight Consultant)
