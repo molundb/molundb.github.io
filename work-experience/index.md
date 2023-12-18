@@ -32,7 +32,7 @@ Scrum teams responsible for developing the Zooplus Android app.
   the Android app, iOS app and mobile apps backend.
 - Improved our team’s Scrum process and organized sprint retros.
 
-## Flutter Developer - Jimdo (Netlight Consultant)
+## Flutter Engineer - Jimdo (Netlight Consultant)
 
 ### _Q3 2022 - Q2 2023_
 
@@ -45,7 +45,7 @@ Joined a small, ongoing project aimed at creating a business banking app for
 - Introduced and implemented Flutter integration tests.
 - Facilitated a smooth onboarding process for a new team member.
 
-## Android Developer - TIER Mobility (Netlight Consultant)
+## Android Engineer - TIER Mobility (Netlight Consultant)
 
 ### _Q3 2021 - Q3 20223_
 
@@ -58,7 +58,7 @@ ride features, and pricing experiments.
 - Delivered the group ride feature from ideation to MVP.
 - Spearheaded the adoption of Android Compose.
 
-## Android Developer - Jochen Schweizer My Days (Netlight Consultant)
+## Android Engineer - Jochen Schweizer My Days (Netlight Consultant)
 
 ### _Q4 2019 - Q3 2021_
 
@@ -83,11 +83,11 @@ application using MVI architecture.
   Dagger Hilt, retrofit2, Android Compose, LeakCanary, Hyperion, Espresso,
   Adjust, Emarsys-->
 
-## Java Developer - Lumera (formerly Itello) (Meepo Consultant)
+## Java Engineer - Lumera (formerly Itello) (Meepo Consultant)
 
 ### _Q2 2019 - Q4 2019_
 
-Contributed as a Java developer in a Scrum team at
+Contributed as a Java Engineer in a Scrum team at
 [Lumera](https://lumera.com/en/), a leading insurance management systems
 provider in the Nordics.
 
@@ -96,7 +96,7 @@ provider in the Nordics.
 
 <!--Keywords: Java, Scrum, Insurtech, SQL, Jenkins-->
 
-## Flutter developer - The Life You Can Save (Meepo Consultant Inhouse)
+## Flutter Engineer - The Life You Can Save (Meepo Consultant Inhouse)
 
 ### _Q3 2018 - Q2 2019_
 
