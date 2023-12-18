@@ -65,12 +65,12 @@ ride features, and pricing experiments.
 At [Jochen Schweizer Mydays Group](https://www.jochen-schweizer.de/), a leader in Germany's experience product
 market selling about 1 million vouchers annually, I played a crucial role in a
 small Android team revamping the legacy app into a state-of-the-art Kotlin-based
-application using MVI architecture.
+application using MVVM architecture.
 
 - Implemented cutting-edge technologies and tools including:
   - Kotlin for the entire app
   - Android Compose for the entire UI
-  - MVI (Model-View-Intent) as the architectural pattern
+  - MVVM as the architectural pattern
   - Room for local database management
   - Dagger Hilt for dependency injection
   - Coroutines for efficient threading
