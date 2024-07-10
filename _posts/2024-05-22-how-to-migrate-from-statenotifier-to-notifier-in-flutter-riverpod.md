@@ -1,7 +1,7 @@
 ---
 layout: post
 title:
-  "Migrate from StateNotifier to Notifier in Flutter"
+  "How to Migrate from StateNotifier to Notifier in Flutter Riverpod"
 ---
 
 {% assign date = page.date | date: "%F" %}
