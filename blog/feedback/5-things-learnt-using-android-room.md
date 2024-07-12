@@ -14,62 +14,34 @@ local database. I hadn't used Room in a few years and in this article I'll share
 five basic things that I learnt while picking it up again. Here we
 go!
 
-## 1. Using autoGenerate with the @PrimaryKey as 0 or null to generate ids
+## 1. AutoGenerate only works when @PrimaryKey is 0 or null
 
 In Room, data is stored as
 [Entities](https://developer.android.com/training/data-storage/room/defining-data) and all Entities need to have a
-[PrimaryKey](https://developer.android.com/training/data-storage/room/defining-data#primary-key)
+[PrimaryKey](https://developer.android.com/training/data-storage/room/defining-data#primary-key). PrimaryKeys can be generated automatically by using `@PrimaryKey(autoGenerate = true)`.
 
-In One Rep Max Tracker I initially had a `MovementEntity` with `id` as the
-`@PrimaryKey`.
-
-```
-@Entity
-data class MovementEntity(
-    @PrimaryKey val id: Long,
-    val name: String,
-)
-```
-
-<!-- To add `MovementEntity` to the database I used the `insert` method of
-`MovementDao`.
-
-```
-@Dao
-interface MovementDao {
-    @Insert
-    suspend fun insert(movement: MovementEntity): Long
-}
-``` -->
-
-This worked fine, but had two problems:
-
-1. I needed to set the id of MovementEntity myself
-2. If I tried inserting a MovementEntity with an id that already existed in
-   the database the app would crash:
-   `android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: MovementEntity.id (code 1555 SQLITE_CONSTRAINT_PRIMARYKEY)`
-
-Luckily, Room has
-[autoGenerate](<https://developer.android.com/reference/kotlin/androidx/room/PrimaryKey#autoGenerate()>)
-to generate ids automatically. Importantly, *the value needs to be
-either 0 or null for the id to be [generated](<https://developer.android.com/reference/kotlin/androidx/room/PrimaryKey#autoGenerate()>)*..
+In One Rep Max Tracker I created a `MovementEntity` with `id` as the
+PrimaryKey.
 
 ```
 @Entity
 data class MovementEntity(
-    @PrimaryKey(autoGenerate = true) val id: Long, // Needs to be either 0 or null to automatically generate the id
+    @PrimaryKey(autoGenerate = true) val id: Long,
     val name: String,
 )
 ```
 
-After adding `autoGenerate = true` and using 0 for the id both my problems were resolved.
+However, for some reason, the ids weren't being automatically generated. After a while I realised it was because I was setting the id to -1. The id *needs to be
+either 0 or null* to be [generated](<https://developer.android.com/reference/kotlin/androidx/room/PrimaryKey#autoGenerate()>).
+
+After updating my code the ids started being generated automatically as expected.
 
 ## 2. Handling nullability
 
-Not knowing have to handle nullability with Room caused my app to crash.
+Not knowing have to handle nullability in Room caused my app to crash.
 
 I had the following [Query](https://developer.android.com/reference/androidx/room/Query) which fetched all `OneRMEntities` with a certain `id`.
-Since all the `oneRMids` were unique this would return at most one `OneRMEntity`.
+Since all `oneRMids` were unique this would return at most one `OneRMEntity`.
 
 ```
 @Query("SELECT * FROM oneRMEntity WHERE oneRMid = :id")
@@ -84,7 +56,7 @@ override fun getOneRM(id: Long): Flow<OneRMInfo> =
     oneRMDao.getOneRM(id).map { it.asExternalModel() }
 ```
 
-However, this caused a crash whenever no `OneRMEntity` with the id was found.
+However, this caused the following crash whenever no `OneRMEntity` with the id was found:
 
 ```
 java.lang.NullPointerException: Parameter specified as non-null is null: method OneRMEntityKt.asExternalModel, parameter <this>
@@ -114,7 +86,7 @@ Voila, no more crashes!
 
 Sometimes it's necessary to combine data from two tables in Room.
 
-In my case I needed information from both `MovementEntity` and `OneRMEntity`, so I
+In my case I needed information from both `MovementEntity` and `OneRMEntity`, and
 created the following `@Query`:
 
 ```
@@ -122,7 +94,7 @@ created the following `@Query`:
 fun getMovements(): Flow<Map<MovementEntity, List<OneRMEntity>>>
 ```
 
-I used [LEFT JOIN](https://www.w3schools.com/sql/sql_join_left.asp) to get all
+I use [LEFT JOIN](https://www.w3schools.com/sql/sql_join_left.asp) to get all
 `MovementEntities` and only the matching `OneRMEntities`.
 
 The mapping method to my UI model `Movement` looks like this:
@@ -163,7 +135,7 @@ override suspend fun getMovements(): List<Movement> =
     }
 ```
 
-In the ViewModel the repoisory method was called and the `_uiState` was updated.
+In the ViewModel the repository method was called and `_uiState` was updated.
 
 ```
 fun getMovements() {
@@ -174,28 +146,31 @@ fun getMovements() {
 }
 ```
 
-So far so good, but now comes the problem. If the data in the database would updated either by adding, editing or deleting a `Movement`, then `getMovements()` *had to be called* to update the UI with the latest state of the database.
+So far so good, but now comes the problem.
+
+### The Problem
+If the data in the database would updated either by adding, editing or deleting a `Movement`, then to keep the UI up to date with the state of the database, *`getMovements()` had to be called*.
 
 ```
 fun addMovement(movement: Movement) {
     viewModelScope.launch {
         val movementId = movementsRepository.setMovement(movement)
 	    ...
-        getMovements() // Needed to make sure the UI reflected the database
+        getMovements() // Needed to make the UI reflects the database
     }
 }
 
 fun editMovement(movement: Movement) {
     viewModelScope.launch {
         movementsRepository.setMovement(movement)
-        getMovements() // Needed to make sure the UI reflected the database
+        getMovements() // Needed to make the UI reflects the database
     }
 }
 
 fun deleteMovement(id: Long) {
     viewModelScope.launch {
         movementsRepository.deleteMovement(id)
-        getMovements() // Needed to make sure the UI reflected the database
+        getMovements() // Needed to make the UI reflects the database
     }
 }
 ```
@@ -267,7 +242,7 @@ Being able to debug well is crucial to be able to develop well. Android Studio
 has [great support](https://developer.android.com/studio/inspect/database) for
 debugging Room. In the App Inspection window it's possible to inspect, query, and modify the
 app's databases while the app is running. This is extremely useful and greatly
-speeds up development. To get started, simply open the App Insection window at `View > Tool Windows > App Inspection`, select the Database Inspector tab, and select the running app process from the menu. 
+speeds up development. To get started, simply open the App Inspection window at `View > Tool Windows > App Inspection`, select the Database Inspector tab, and select the running app process from the menu. 
 
 Here is an example of App Inspection of the database of One Rep Max Tracker.
 ![screenshot](/assets/images/blog/app-inspection.png){:width="800px"}
@@ -276,6 +251,6 @@ Here is an example of App Inspection of the database of One Rep Max Tracker.
 
 Room is an extremely useful tool for Android development. In this article I've
 presented five basic things that I learnt while using Room for my app
-[One Rep Max Tracker](https://github.com/molundb/one-rep-max-tracker).
+[One Rep Max Tracker](https://github.com/molundb/one-rep-max-tracker). I hope you found it useful! 
 
-What are some things about Room that you'd like to share? Let me know in the comments!
+<!-- What are some things about Room that you'd like to share? Let me know in the comments!-->
