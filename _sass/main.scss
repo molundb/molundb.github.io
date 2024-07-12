@@ -66,6 +66,16 @@ div.post p {
   max-width: 100%;
 }
 
+ul.posts li {
+  max-width: 100%;
+}
+
+ul.posts li span{
+  display:inline-block;
+  width: 110px;
+  text-align: end;
+}
+
 th {
   font-family: "Roboto", "Sans-Serif";
   font-weight: bold;
