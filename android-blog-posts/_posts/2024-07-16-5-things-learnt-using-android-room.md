@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "5 Things Learnt Using Android Room"
+title: "5 Things I Learnt Using Android Room"
 ---
 
 {% assign date = page.date | date: "%F" %}
@@ -52,8 +52,7 @@ In my repository I called the method and mapped it to an external model to be
 displayed in the UI.
 
 ```
-override fun getOneRM(id: Long): Flow<OneRMInfo> =
-    oneRMDao.getOneRM(id).map { it.asExternalModel() }
+override fun getOneRM(id: Long): Flow<OneRMInfo> = oneRMDao.getOneRM(id).map { it asExternalModel() }
 ```
 
 However, this caused the following crash whenever no `OneRMEntity` with the id was found:
@@ -76,8 +75,7 @@ fun getOneRM(id: Long): Flow<OneRMEntity?>
 Then I added `filterNotNull()` before mapping it to my external model.
 
 ```
-override fun getOneRM(id: Long): Flow<OneRMInfo> =
-    oneRMDao.getOneRM(id).filterNotNull().map { it.asExternalModel() }
+override fun getOneRM(id: Long): Flow<OneRMInfo> = oneRMDao.getOneRM(id).filterNotNull().map { it.asExternalModel() }
 ```
 
 Voila, no more crashes!
@@ -94,10 +92,10 @@ created the following `@Query`:
 fun getMovements(): Flow<Map<MovementEntity, List<OneRMEntity>>>
 ```
 
-I use [LEFT JOIN](https://www.w3schools.com/sql/sql_join_left.asp) to get all
+I used [LEFT JOIN](https://www.w3schools.com/sql/sql_join_left.asp) to get all
 `MovementEntities` and only the matching `OneRMEntities`.
 
-The mapping method to my UI model `Movement` looks like this:
+The method I created to map to my UI model `Movement` looks like this:
 
 ```
 fun Map.Entry<MovementEntity, List<OneRMEntity>>.asExternalMovement() = Movement(
