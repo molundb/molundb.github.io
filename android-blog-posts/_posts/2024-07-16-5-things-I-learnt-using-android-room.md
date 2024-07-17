@@ -243,7 +243,7 @@ app's databases while the app is running. This is extremely useful and greatly
 speeds up development. To get started, simply open the App Inspection window at `View > Tool Windows > App Inspection`, select the Database Inspector tab, and select the running app process from the menu. 
 
 Here is an example of App Inspection of the database of One Rep Max Tracker.
-![screenshot](/assets/images/blog/app-inspection.png){:width="800px"}
+![screenshot]({{asset_path}}/app-inspection.png){:width="800px"}
 
 ## Conclusion
 
