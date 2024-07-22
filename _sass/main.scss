@@ -35,10 +35,21 @@ nav ul li a {
 footer ul li a img {
   margin-bottom: 40px;
 }
+ol,
+ul {
+  font-size: 1.2em;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+ol ol,
+ul ul {
+  font-size: 1em;
+}
+ol li,
 ul li {
   margin-top: 1em;
   margin-bottom: 1em;
-  max-width: 720px;
+  font-weight: lighter;
 }
 a {
   text-decoration: underline;
@@ -59,9 +70,6 @@ h2 {
 div.post h3 {
   margin-block-start: 2em;
 }
-div.post ol li {
-  padding-bottom: 8px;
-}
 div.post p {
   max-width: 100%;
 }
@@ -70,8 +78,8 @@ ul.posts li {
   max-width: 100%;
 }
 
-ul.posts li span{
-  display:inline-block;
+ul.posts li span {
+  display: inline-block;
   width: 110px;
   text-align: end;
 }
@@ -94,6 +102,11 @@ p.home-paragraph {
 
 footer {
   font-size: 0.8em;
+}
+
+.post ol li,
+.post ul li {
+  font-size: 1.2em;
 }
 
 ul.posts {
@@ -130,6 +143,22 @@ td {
 th {
   text-align: start;
   font-size: 1.25em;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0 0;
+  overflow: hidden;
+  padding: 0 0 0 16px;
+  position: relative;
+}
+blockquote:before {
+  content: "";
+  border-left: 2px solid #575555;
+  position: absolute;
+  bottom: 14px;
+  top: 13px;
+  left: 0;
 }
 
 .current-menu-item {
