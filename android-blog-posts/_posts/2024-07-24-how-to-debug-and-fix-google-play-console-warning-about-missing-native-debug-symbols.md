@@ -21,7 +21,7 @@ First things first, let's understand what the warning means. I'm assuming you al
 ### Native code
 The Native Development Kit (NDK) is a set of tools that allows you to use C and C++ code with Android. The best place to learn about it is the [official documentation](https://developer.android.com/ndk/guides). Most Android applications don't need C/C++ code, but it can be useful for cases where you need to either improve the performance in apps like games or physics simulations, or reuse C/C++ libraries.
 
-Seeing the warning in Play Store means that your application contains C/C++ code.
+Seeing the warning in the Google Play Console means that your application contains C/C++ code.
 
 ### Native debug symbols
 Native debug symbols are needed to be able to debug native code. From the official documentation: 
@@ -97,8 +97,6 @@ In my case the debugging session ended here. I knew what the issue was, and coul
 
 ### If the .so files have debug symbols
 If the .so files *have* debug symbols then they should be packaged in the bundle. If they're not we need to figure out why.
-
-<!-- >By default, native code libraries are stripped in release builds of your app. This stripping consists of removing the symbol table and debugging information contained in any native libraries used by your app. -->
 
 If you use Android Gradle plugin version 4.1 or later and are building an Android App Bundle, you can [automatically include](https://developer.android.com/build/shrink-code#android_gradle_plugin_version_41_or_later) the native debug symbols file in it. 
 
