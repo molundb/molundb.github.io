@@ -20,6 +20,7 @@ interests:
 
 - Language learning; I am fluent in Swedish, English, and German, decent in Spanish, and learning Italian
 - Visiting and [reviewing](https://www.happycow.net/members/profile/Dandido) vegan restaurants
+- Lifting weights and getting sweaty at my local Crossfit box
 - Exploring philosophy, politics, and ethics
 - Effective altruism; I took the
   [Giving What We Can pledge](https://www.givingwhatwecan.org/pledge) in 2018
