@@ -9,7 +9,7 @@ title: Work Experience
 
 ### _Q3 2024 - Present_
 
-I led the complete rewrite of Blacklane’s Android chauffeur app - successfully delivering on time and gradually rolling it out globally.
+I led the complete rewrite of Blacklane’s Android chauffeur app - successfully delivering on time and gradually rolling it out to all 40+ countries.
 
 - Architected a modern, modular, and well-tested MVVM-based application using Kotlin Coroutines and Jetpack Compose, achieving a >99% crash-free rate.
 - Collaborated closely with data and product to create a data-driven experience, leveraging Datadog, RudderStack, and Mixpanel for analytics.
