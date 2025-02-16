@@ -12,7 +12,7 @@ title: Work Experience
 I led the complete rewrite of Blacklane’s Android chauffeur app - successfully delivering on time and gradually rolling it out to all 40+ countries.
 
 - Architected a modern, modular, and well-tested MVVM-based application using Kotlin Coroutines and Jetpack Compose, achieving a >99% crash-free rate.
-- Collaborated closely with data and product to create a data-driven experience, leveraging Datadog, RudderStack, and Mixpanel for analytics.
+- CImplemented analytics using Datadog, RudderStack, and Mixpanel, ensuring visibility into app usage and performance
 - Mentored and supported more junior developers, fostering a culture of learning and continuous improvement.
 
 ## Senior Android Engineer - Zooplus (Netlight Consultant)
