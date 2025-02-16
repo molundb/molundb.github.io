@@ -9,20 +9,18 @@ title: About
 
 I'm a software engineer passionate about using technology to create positive
 change. I was born and raised in Sweden but have had the privilege of also
-calling Ireland, China, and Germany home, embracing diverse cultures, languages
+calling Ireland, China, Germany, and Colombia home, embracing diverse cultures, languages
 and experiences along the way. I have a master's degree in Computer Science and
 am specialized in Android and Flutter development.
 
 ### _Interests_
 
-In my free time, I strive for continuous learning. Here are some of my
+In my free time, I like learning and trying new things. Here are some of my
 interests:
 
-- Working on hobby projects like
-  [Mellotippet](https://github.com/molundb/mellotippet)
+- Language learning; I am fluent in Swedish, English, and German, decent in Spanish, and learning Italian
+- Visiting and [reviewing](https://www.happycow.net/members/profile/Dandido) vegan restaurants
 - Exploring philosophy, politics, and ethics
-- Language learning; I'm fluent in Swedish, English, and German and currently
-  learning Spanish
 - Effective altruism; I took the
   [Giving What We Can pledge](https://www.givingwhatwecan.org/pledge) in 2018
   and consistently donate 10% of my salary to impactful charities. Learn more
